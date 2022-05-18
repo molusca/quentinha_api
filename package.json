@@ -1,0 +1,19 @@
+{
+  "name": "quentinha_api",
+  "version": "1.0.0",
+  "description": "Api for Quentinha app",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/molusca/quentinha_api.git"
+  },
+  "author": "Lucas Freitas, Leonardo Florencio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/molusca/quentinha_api/issues"
+  },
+  "homepage": "https://github.com/molusca/quentinha_api#readme"
+}
