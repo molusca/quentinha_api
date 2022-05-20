@@ -6,56 +6,55 @@ module.exports = {
       'Users',
       {
         id: {
-          type: Sequelize.INTEGER,
+          type: Sequelize.INTEGER.UNSIGNED,
           primaryKey: true,
           autoIncrement: true,
-          allowNull: false,
+          allowNull: false
         },
         active: {
           type: Sequelize.BOOLEAN,
-          allowNull: false,
+          allowNull: false
         },
         department_id: {
-          type: Sequelize.NUMBER,
+          type: Sequelize.INTEGER
         },
         email: {
           type: Sequelize.STRING,
-          allowNull: false,
+          allowNull: false
         },
         name: {
           type: Sequelize.STRING,
-          allowNull: false,
+          allowNull: false
         },
         notes: {
-          type: Sequelize.STRING,
+          type: Sequelize.STRING
         },
         password: {
-          type: Sequelize.STRING,
+          type: Sequelize.STRING
         },
         size_preference: {
-          type: Sequelize.ENUM('P','M', 'G'),
-          allowNull: false,
+          type: Sequelize.ENUM('p', 'm', 'g'),
+          allowNull: false
         },
         token: {
           type: Sequelize.STRING,
-          allowNull: false,
+          allowNull: false
         },
         type: {
           type: Sequelize.ENUM('admin','worker'),
-          allowNull: false,
+          allowNull: false
         },
-        createdAt: {
+        created_at: {
           type: Sequelize.DATE,
-          allowNull: false,
+          allowNull: false
         },
-        updatedAt: {
+        updated_at: {
           type: Sequelize.DATE,
-          allowNull: false,
+          allowNull: false
         }
       }
     );
   },
-
   down: async (queryInterface, Sequelize) => {
     return queryInterface.dropTable('Users');
   }
