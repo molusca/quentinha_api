@@ -11,39 +11,39 @@ module.exports = {
           autoIncrement: true,
           allowNull: false,
         },
-        amount_g: {
+        amountG: {
           type: Sequelize.INTEGER,
           allowNull: false,
         },
-        amount_m: {
+        amountM: {
           type: Sequelize.INTEGER,
           allowNull: false,
         },
-        amount_p: {
+        amountP: {
           type: Sequelize.INTEGER,
           allowNull: false,
         },
-        creator_user_id: {
+        creatorUserId: {
           type: Sequelize.INTEGER,
           allowNull: false,
         },
-        restaurant_id: {
+        restaurantId: {
           type: Sequelize.INTEGER,
           allowNull: false,
         },
-        total_value: {
+        totalValue: {
           type: Sequelize.FLOAT,
           allowNull: false,
         },
-        created_at: {
+        createdAt: {
           type: Sequelize.DATE,
           allowNull: false,
         },
-        updated_at: {
+        updatedAt: {
           type: Sequelize.DATE,
           allowNull: false,
         },
-        deleted_at: {
+        deletedAt: {
           type: Sequelize.DATE
         }
       }

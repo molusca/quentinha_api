@@ -9,28 +9,33 @@ module.exports = {
 		await queryInterface.bulkInsert('Departments', [
 			{
         name: 'Financeiro',
-        created_at: new Date(),
-        updated_at: new Date(),
+        createdAt: new Date(),
+        updatedAt: new Date(),
 			},
 			{
         name: 'Recursos Humanos',
-        created_at: new Date(),
-        updated_at: new Date(),
+        createdAt: new Date(),
+        updatedAt: new Date(),
 			},
 			{
         name: 'Vendas',
-        created_at: new Date(),
-        updated_at: new Date(),
+        createdAt: new Date(),
+        updatedAt: new Date(),
 			},
 			{
         name: 'Marketing',
-        created_at: new Date(),
-        updated_at: new Date(),
+        createdAt: new Date(),
+        updatedAt: new Date(),
 			},
 			{
         name: 'Operacional',
-        created_at: new Date(),
-        updated_at: new Date(),
+        createdAt: new Date(),
+        updatedAt: new Date(),
+			},
+			{
+        name: 'Administração',
+        createdAt: new Date(),
+        updatedAt: new Date(),
 			},
 		], {});
 

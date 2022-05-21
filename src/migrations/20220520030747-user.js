@@ -15,7 +15,7 @@ module.exports = {
           type: Sequelize.BOOLEAN,
           allowNull: false
         },
-        department_id: {
+        departmentId: {
           type: Sequelize.INTEGER
         },
         email: {
@@ -32,7 +32,7 @@ module.exports = {
         password: {
           type: Sequelize.STRING
         },
-        size_preference: {
+        sizePreference: {
           type: Sequelize.ENUM('p', 'm', 'g'),
         },
         token: {
@@ -43,15 +43,15 @@ module.exports = {
           type: Sequelize.ENUM('admin','worker'),
           allowNull: false
         },
-        created_at: {
+        createdAt: {
           type: Sequelize.DATE,
           allowNull: false
         },
-        updated_at: {
+        updatedAt: {
           type: Sequelize.DATE,
           allowNull: false
         },
-        deleted_at: {
+        deletedAt: {
           type: Sequelize.DATE
         }
       }

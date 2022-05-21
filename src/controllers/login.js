@@ -7,7 +7,6 @@ const helpers = require('../helpers/functions');
 async function loginController(req, res) {
   const body = req.body;
   const requiredItems = ['email', 'password'];
-  console.log(body);
 
   for (let item of requiredItems) {
     if(!helpers.existsAndHasValue(item, body)) {
@@ -20,7 +19,7 @@ async function loginController(req, res) {
 
   let user = await Models.User.findOne({
     where: {
-      email: body.email
+      email: (body.email).toLowerCase()
     }
   });
 

@@ -21,13 +21,14 @@ module.exports = {
 		await queryInterface.bulkInsert('Users', [
 			{
         active: true,
+        departmentId: 6,
         email: 'admin@email.com',
         name: 'Lucas Freitas',
         password: await getPassword('admin'),
         token: await createToken(),
         type: 'admin',
-        created_at: new Date(),
-        updated_at: new Date(),
+        createdAt: new Date(),
+        updatedAt: new Date(),
 			},
 		], {});
 

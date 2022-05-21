@@ -11,23 +11,23 @@ module.exports = {
           autoIncrement: true,
           allowNull: false,
         },
-        user_id: {
+        userId: {
           type: Sequelize.INTEGER,
           allowNull: false,
         },
-        department_id: {
+        departmentId: {
           type: Sequelize.INTEGER,
           allowNull: false,
         },
-        created_at: {
+        createdAt: {
           type: Sequelize.DATE,
           allowNull: false,
         },
-        updated_at: {
+        updatedAt: {
           type: Sequelize.DATE,
           allowNull: false,
         },
-        deleted_at: {
+        deletedAt: {
           type: Sequelize.DATE
         }
       }

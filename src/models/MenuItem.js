@@ -17,15 +17,14 @@ module.exports = (sequelize, DataTypes) => {
   MenuItem.init({
     description: DataTypes.STRING,
     name: DataTypes.STRING,
-    restaurant_id: DataTypes.NUMBER,
-    created_at: DataTypes.DATE,
-    updated_at: DataTypes.DATE,
-    deleted_at: DataTypes.DATE
+    restaurantId: DataTypes.NUMBER,
+    createdAt: DataTypes.DATE,
+    updatedAt: DataTypes.DATE,
+    deletedAt: DataTypes.DATE
   },{
     sequelize,
     modelName: 'MenuItem',
     tableName: 'MenuItems',
-    underscored: true,
     paranoid: true
   });
 

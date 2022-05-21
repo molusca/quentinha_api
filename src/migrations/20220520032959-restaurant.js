@@ -19,47 +19,47 @@ module.exports = {
           type: Sequelize.STRING,
           allowNull: false,
         },
-        order_email: {
+        orderEmail: {
           type: Sequelize.STRING,
           allowNull: false,
         },
-        order_phone: {
+        orderPhone: {
           type: Sequelize.STRING,
           allowNull: false,
         },
-        price_g: {
+        priceG: {
           type: Sequelize.FLOAT,
           allowNull: false,
         },
-        price_m: {
+        priceM: {
           type: Sequelize.FLOAT,
           allowNull: false,
         },
-        price_p: {
+        priceP: {
           type: Sequelize.FLOAT,
           allowNull: false,
         },
-        responsible_email: {
+        responsibleEmail: {
           type: Sequelize.STRING,
           allowNull: false,
         },
-        responsible_name: {
+        responsibleName: {
           type: Sequelize.STRING,
           allowNull: false,
         },
-        responsible_phone: {
+        responsiblePhone: {
           type: Sequelize.STRING,
           allowNull: false,
         },
-        created_at: {
+        createdAt: {
           type: Sequelize.DATE,
           allowNull: false,
         },
-        updated_at: {
+        updatedAt: {
           type: Sequelize.DATE,
           allowNull: false,
         },
-        deleted_at: {
+        deletedAt: {
           type: Sequelize.DATE
         }
       }

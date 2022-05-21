@@ -15,20 +15,19 @@ module.exports = (sequelize, DataTypes) => {
 	};
 
   Order.init({
-    amount_g: DataTypes.NUMBER,
-    amount_m: DataTypes.NUMBER,
-    amount_p: DataTypes.NUMBER,
-    creator_user_id: DataTypes.NUMBER,
-    restaurant_id: DataTypes.NUMBER,
-    total_value: DataTypes.FLOAT,
-    created_at: DataTypes.DATE,
-    updated_at: DataTypes.DATE,
-    deleted_at: DataTypes.DATE
+    amountG: DataTypes.NUMBER,
+    amountM: DataTypes.NUMBER,
+    amountP: DataTypes.NUMBER,
+    creatorUserId: DataTypes.NUMBER,
+    restaurantId: DataTypes.NUMBER,
+    totalValue: DataTypes.FLOAT,
+    createdAt: DataTypes.DATE,
+    updatedAt: DataTypes.DATE,
+    deletedAt: DataTypes.DATE
   },{
     sequelize,
     modelName: 'Order',
     tableName: 'Orders',
-    underscored: true,
     paranoid: true
   });
 

@@ -15,19 +15,18 @@ module.exports = (sequelize, DataTypes) => {
 	};
 
   OrderItem.init({
-    menu_item_id: DataTypes.NUMBER,
+    menuItemId: DataTypes.NUMBER,
     notes: DataTypes.STRING,
-    order_id: DataTypes.NUMBER,
+    orderId: DataTypes.NUMBER,
     size: DataTypes.ENUM('P', 'M', 'G'),
-    worker_id: DataTypes.NUMBER,
-    created_at: DataTypes.DATE,
-    updated_at: DataTypes.DATE,
-    deleted_at: DataTypes.DATE
+    workerId: DataTypes.NUMBER,
+    createdAt: DataTypes.DATE,
+    updatedAt: DataTypes.DATE,
+    deletedAt: DataTypes.DATE
   },{
     sequelize,
     modelName: 'OrderItem',
     tableName: 'OrderItems',
-    underscored: true,
     paranoid: true
   });
 

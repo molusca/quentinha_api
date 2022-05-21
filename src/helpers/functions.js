@@ -5,6 +5,20 @@ function existsAndHasValue(value, key) {
   return true;
 }
 
+function randomString(length) {
+  var result = '';
+  var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  const charactersLength = characters.length;
+
+  do {
+    result += characters.charAt(Math.floor(Math.random() * charactersLength));
+  }
+  while (result.length < length);
+
+  return result;
+}
+
 module.exports = {
-  existsAndHasValue
+  existsAndHasValue,
+  randomString
 }

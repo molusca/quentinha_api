@@ -16,14 +16,13 @@ module.exports = (sequelize, DataTypes) => {
   
   Department.init({
     name: DataTypes.STRING,
-    created_at: DataTypes.DATE,
-    updated_at: DataTypes.DATE,
-    deleted_at: DataTypes.DATE
+    createdAt: DataTypes.DATE,
+    updatedAt: DataTypes.DATE,
+    deletedAt: DataTypes.DATE
   },{
     sequelize,
     modelName: 'Department',
     tableName: 'Departments',
-    underscored: true,
     paranoid: true
   });
 

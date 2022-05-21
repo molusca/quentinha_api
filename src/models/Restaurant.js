@@ -17,22 +17,21 @@ module.exports = (sequelize, DataTypes) => {
   Restaurant.init({
     cnpj: DataTypes.STRING,
     name: DataTypes.STRING,
-    order_email: DataTypes.STRING,
-    oder_phone: DataTypes.STRING,
-    price_g: DataTypes.FLOAT,
-    price_m: DataTypes.FLOAT,
-    price_p: DataTypes.FLOAT,
-    responsible_email: DataTypes.STRING,
-    responsible_name: DataTypes.STRING,
-    responsible_phone: DataTypes.STRING,
-    created_at: DataTypes.DATE,
-    updated_at: DataTypes.DATE,
-    deleted_at: DataTypes.DATE
+    orderEmail: DataTypes.STRING,
+    oderPhone: DataTypes.STRING,
+    priceG: DataTypes.FLOAT,
+    priceM: DataTypes.FLOAT,
+    priceP: DataTypes.FLOAT,
+    responsibleEmail: DataTypes.STRING,
+    responsibleName: DataTypes.STRING,
+    responsiblePhone: DataTypes.STRING,
+    createdAt: DataTypes.DATE,
+    updatedAt: DataTypes.DATE,
+    deletedAt: DataTypes.DATE
   },{
     sequelize,
     modelName: 'Restaurant',
     tableName: 'Restaurants',
-    underscored: true,
     paranoid: true
   });
 

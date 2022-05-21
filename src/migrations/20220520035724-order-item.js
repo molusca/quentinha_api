@@ -11,7 +11,7 @@ module.exports = {
           autoIncrement: true,
           allowNull: false,
         },
-        menu_item_id: {
+        menuItemId: {
           type: Sequelize.INTEGER,
           allowNull: false,
         },
@@ -19,7 +19,7 @@ module.exports = {
           type: Sequelize.STRING,
           allowNull: false,
         },
-        order_id: {
+        orderId: {
           type: Sequelize.INTEGER,
           allowNull: false,
         },
@@ -27,19 +27,19 @@ module.exports = {
           type: Sequelize.ENUM('P', 'M', 'G'),
           allowNull: false,
         },
-        worker_id: {
+        workerId: {
           type: Sequelize.INTEGER,
           allowNull: false,
         },
-        created_at: {
+        createdAt: {
           type: Sequelize.DATE,
           allowNull: false,
         },
-        updated_at: {
+        updatedAt: {
           type: Sequelize.DATE,
           allowNull: false,
         },
-        deleted_at: {
+        deletedAt: {
           type: Sequelize.DATE
         }
       }

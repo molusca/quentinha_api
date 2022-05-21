@@ -16,22 +16,21 @@ module.exports = (sequelize, DataTypes) => {
 
   User.init({
     active: DataTypes.BOOLEAN,
-    department_id: DataTypes.NUMBER,
+    departmentId: DataTypes.NUMBER,
     email: DataTypes.STRING,
     name: DataTypes.STRING,
     notes: DataTypes.STRING,
     password: DataTypes.STRING,
-    size_preference: DataTypes.ENUM('p', 'm', 'g'),
+    sizePreference: DataTypes.ENUM('p', 'm', 'g'),
     token: DataTypes.STRING,
     type: DataTypes.ENUM('admin', 'worker'),
-    created_at: DataTypes.DATE,
-    updated_at: DataTypes.DATE,
-    deleted_at: DataTypes.DATE
+    createdAt: DataTypes.DATE,
+    updatedAt: DataTypes.DATE,
+    deletedAt: DataTypes.DATE
   },{
     sequelize,
     modelName: 'User',
     tableName: 'Users',
-    underscored: true,
     paranoid: true
   });
 
