@@ -11,7 +11,6 @@ module.exports = (sequelize, DataTypes) => {
 		 */
 		static associate(models) {
 			// define association here
-      MenuItem.belongsTo(models.Restaurant, { foreignKey: 'restaurant_id', onDelete: 'CASCADE' })
 		}
 	};
 
@@ -21,6 +20,7 @@ module.exports = (sequelize, DataTypes) => {
     restaurant_id: DataTypes.NUMBER,
     created_at: DataTypes.DATE,
     updated_at: DataTypes.DATE,
+    deleted_at: DataTypes.DATE
   },{
     sequelize,
     modelName: 'MenuItem',

@@ -11,9 +11,6 @@ module.exports = (sequelize, DataTypes) => {
 		 */
 		static associate(models) {
       // define association here
-      User.belongsTo(models.UserDepartment, { foreignKey: 'user_id', onDelete: 'CASCADE' }),
-      User.hasMany(models.OrderItem, { foreignKey: 'worker_id', onDelete: 'CASCADE' }),
-      User.hasMany(models.Order, { foreignKey: 'creator_user_id', onDelete: 'CASCADE' })
 		}
 	};
 
@@ -28,7 +25,8 @@ module.exports = (sequelize, DataTypes) => {
     token: DataTypes.STRING,
     type: DataTypes.ENUM('admin', 'worker'),
     created_at: DataTypes.DATE,
-    updated_at: DataTypes.DATE
+    updated_at: DataTypes.DATE,
+    deleted_at: DataTypes.DATE
   },{
     sequelize,
     modelName: 'User',

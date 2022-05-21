@@ -27,6 +27,7 @@ module.exports = (sequelize, DataTypes) => {
     responsible_phone: DataTypes.STRING,
     created_at: DataTypes.DATE,
     updated_at: DataTypes.DATE,
+    deleted_at: DataTypes.DATE
   },{
     sequelize,
     modelName: 'Restaurant',

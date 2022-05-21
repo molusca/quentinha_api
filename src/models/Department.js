@@ -18,6 +18,7 @@ module.exports = (sequelize, DataTypes) => {
     name: DataTypes.STRING,
     created_at: DataTypes.DATE,
     updated_at: DataTypes.DATE,
+    deleted_at: DataTypes.DATE
   },{
     sequelize,
     modelName: 'Department',

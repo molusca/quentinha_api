@@ -11,8 +11,6 @@ module.exports = (sequelize, DataTypes) => {
 		 */
 		static associate(models) {
 			// define association here
-      User.belongsTo(models.Department, { foreignKey: 'department_id', onDelete: 'CASCADE' }),
-      User.hasMany(models.User, { foreignKey: 'user_id', onDelete: 'CASCADE' })
 		}
 	};
   
@@ -21,6 +19,7 @@ module.exports = (sequelize, DataTypes) => {
     department_id: DataTypes.NUMBER,
     created_at: DataTypes.DATE,
     updated_at: DataTypes.DATE,
+    deleted_at: DataTypes.DATE
   },{
     sequelize,
     modelName: 'UserDepartment',

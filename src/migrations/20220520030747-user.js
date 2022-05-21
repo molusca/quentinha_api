@@ -34,7 +34,6 @@ module.exports = {
         },
         size_preference: {
           type: Sequelize.ENUM('p', 'm', 'g'),
-          allowNull: false
         },
         token: {
           type: Sequelize.STRING,
@@ -51,6 +50,9 @@ module.exports = {
         updated_at: {
           type: Sequelize.DATE,
           allowNull: false
+        },
+        deleted_at: {
+          type: Sequelize.DATE
         }
       }
     );

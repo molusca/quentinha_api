@@ -4,6 +4,8 @@
   "description": "Api for Quentinha app",
   "main": "index.js",
   "scripts": {
+    "dev": "nodemon src/index.js",
+    "setup": "cd ./src && npx sequelize db:create && npx sequelize db:migrate && npx sequelize db:seed:all",
     "test": "npm run test"
   },
   "repository": {

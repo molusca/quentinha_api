@@ -11,8 +11,6 @@ module.exports = (sequelize, DataTypes) => {
 		 */
 		static associate(models) {
 			// define association here
-      User.belongsTo(models.User, { foreignKey: 'creator_user_id', onDelete: 'CASCADE' }),
-      User.hasMany(models.OrderItem, { foreignKey: 'order_id', onDelete: 'CASCADE' })
 		}
 	};
 
@@ -25,6 +23,7 @@ module.exports = (sequelize, DataTypes) => {
     total_value: DataTypes.FLOAT,
     created_at: DataTypes.DATE,
     updated_at: DataTypes.DATE,
+    deleted_at: DataTypes.DATE
   },{
     sequelize,
     modelName: 'Order',
