@@ -74,7 +74,7 @@ async function createUser(req, res) {
 
     return res.status(200).json({
       success: true,
-      message: '',
+      message: 'User created successfully',
       payload: user,
     });
 
