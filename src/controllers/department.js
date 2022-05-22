@@ -157,11 +157,21 @@ async function deleteDepartment(req, res) {
   const departmentId = req.params.id;
 
   try {
-    await Models.Department.destroy({
+    let department = await Models.Department.findOne({
       where: {
-        id: departmentId,
+        id: departmentId
       }
     });
+
+    if (!department) {
+      return res.status(404).json({
+        success: false,
+        message: 'Department not found',
+        payload: []
+      });
+    }
+
+    await department.destroy();
 
     return res.status(200).json({
       success: true,
