@@ -1,8 +1,6 @@
-const bcrypt = require('bcrypt');
 const helpers = require('../helpers/functions');
 const values = require('../helpers/values');
 const Models = require('../models/index');
-const token = require('../helpers/token');
 
 async function getRestaurants(req, res) {
   try {
