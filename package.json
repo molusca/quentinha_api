@@ -1,0 +1,31 @@
+{
+  "name": "quentinha_api",
+  "version": "1.0.0",
+  "description": "Api for Quentinha app",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "setup": "cd ./src && npx sequelize db:create && npx sequelize db:migrate && npx sequelize db:seed:all",
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/molusca/quentinha_api.git"
+  },
+  "author": "Lucas Freitas, Leonardo Florencio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/molusca/quentinha_api/issues"
+  },
+  "homepage": "https://github.com/molusca/quentinha_api#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.16",
+    "sequelize": "^6.19.1",
+    "sequelize-cli": "^6.4.1"
+  }
+}
