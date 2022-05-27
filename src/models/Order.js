@@ -15,9 +15,9 @@ module.exports = (sequelize, DataTypes) => {
 	};
 
   Order.init({
-    amountG: DataTypes.NUMBER,
+    amountL: DataTypes.NUMBER,
     amountM: DataTypes.NUMBER,
-    amountP: DataTypes.NUMBER,
+    amountS: DataTypes.NUMBER,
     creatorUserId: DataTypes.NUMBER,
     restaurantId: DataTypes.NUMBER,
     totalValue: DataTypes.FLOAT,

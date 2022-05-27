@@ -21,7 +21,7 @@ module.exports = (sequelize, DataTypes) => {
     name: DataTypes.STRING,
     notes: DataTypes.STRING,
     password: DataTypes.STRING,
-    sizePreference: DataTypes.ENUM('p', 'm', 'g'),
+    mealSizePreference: DataTypes.ENUM('s', 'm', 'l'),
     token: DataTypes.STRING,
     type: DataTypes.ENUM('admin', 'worker'),
     createdAt: DataTypes.DATE,

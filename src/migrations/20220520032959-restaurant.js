@@ -27,7 +27,7 @@ module.exports = {
           type: Sequelize.STRING,
           allowNull: false,
         },
-        priceG: {
+        priceL: {
           type: Sequelize.FLOAT,
           allowNull: false,
         },
@@ -35,7 +35,7 @@ module.exports = {
           type: Sequelize.FLOAT,
           allowNull: false,
         },
-        priceP: {
+        priceS: {
           type: Sequelize.FLOAT,
           allowNull: false,
         },

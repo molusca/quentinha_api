@@ -7,7 +7,7 @@ async function getOrders(req, res) {
   const queryVariables = [
     'active',
     'departmentId',
-    'sizePreference',
+    'mealSizePreference',
     'type'
   ];
 
@@ -140,9 +140,9 @@ async function createOrder(req, res) {
     };
   };
 
-  let restaurantPriceG = 0;
+  let restaurantPriceL = 0;
   let restaurantPriceM = 0;
-  let restaurantPriceP = 0;
+  let restaurantPriceS = 0;
   try {
     restaurant = await Models.Restaurant.findOne({
       id: body.restaurantId
@@ -157,9 +157,9 @@ async function createOrder(req, res) {
     }
 
     restaurant = restaurant.toJSON();
-    restaurantPriceG = restaurant.priceG;
+    restaurantPriceL = restaurant.priceL;
     restaurantPriceM = restaurant.priceM;
-    restaurantPriceP = restaurant.priceP;
+    restaurantPriceS = restaurant.priceS;
 
   } catch (error) {
     console.error(error);
@@ -171,14 +171,14 @@ async function createOrder(req, res) {
   }
 
   const orderItems = body.items;
-  let orderAmountG = 0;
+  let orderAmountL = 0;
   let orderAmountM = 0;
-  let orderAmountP = 0;
+  let orderAmountS = 0;
   let orderTotalValue = 0;
   try {
     const orderItemRequiredItems = [
       'menuItemId',
-      'size',
+      'mealSizePreference',
       'workerId',
     ];
 
@@ -192,19 +192,19 @@ async function createOrder(req, res) {
         };
       };
 
-      orderItem['size'] = orderItem['size'].toLowerCase();
+      orderItem['mealSizePreference'] = orderItem['mealSizePreference'].toLowerCase();
       
-      orderItem['size'] === 'p'
-      ? orderAmountP++
-      : orderItem['size'] === 'm'
+      orderItem['mealSizePreference'] === 's'
+      ? orderAmountS++
+      : orderItem['mealSizePreference'] === 'm'
       ? orderAmountM++
-      : orderAmountG++;
+      : orderAmountL++;
     }
 
     orderTotalValue =
-    (restaurantPriceG * orderAmountG)
+    (restaurantPriceL * orderAmountL)
     + (restaurantPriceM * orderAmountM)
-    + (restaurantPriceP * orderAmountP);
+    + (restaurantPriceS * orderAmountS);
 
   } catch (error) {
     console.error(error);
@@ -220,9 +220,9 @@ async function createOrder(req, res) {
     order = await Models.Order.create({
       creatorUserId: creatorUserId,
       restaurantId: body.restaurantId,
-      amountG: orderAmountG,
+      amountL: orderAmountL,
       amountM: orderAmountM,
-      amountP: orderAmountP,
+      amountS: orderAmountS,
       totalValue: orderTotalValue
     });
 

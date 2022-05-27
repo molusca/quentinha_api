@@ -10,7 +10,7 @@ async function getUsers(req, res) {
   const queryVariables = [
     'active',
     'departmentId',
-    'sizePreference',
+    'mealSizePreference',
     'type'
   ];
 
@@ -110,7 +110,7 @@ async function createUser(req, res) {
   };
 
   const notes = body['notes'] ? body['notes'] : null;
-  const sizePreference = body['sizePreference'] ? body['sizePreference'] : null;
+  const mealSizePreference = body['mealSizePreference'] ? body['mealSizePreference'] : null;
   const password = body.type === 'admin' ? await helpers.randomString(10) : null;
 
   try {
@@ -139,7 +139,7 @@ async function createUser(req, res) {
       name: body.name,
       type: body.type,
       notes: notes,
-      sizePreference: sizePreference,
+      mealSizePreference: mealSizePreference,
       password: password ? await bcrypt.hashSync(password, 10) : null,
       token: userToken,
     });
@@ -193,7 +193,7 @@ async function updateUser(req, res) {
       'name',
       'notes',
       'password',
-      'sizePreference',
+      'mealSizePreference',
       'token',
       'type'
     ];

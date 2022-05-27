@@ -1,11 +1,11 @@
-function existsAndHasValue(value, key) {
+async function existsAndHasValue(value, key) {
   if (!value in key || key[value] == null || typeof (key[value]) == 'undefined' || key[value] == ' ' || key[value].length <= 0) {
     return false;
   }
   return true;
 }
 
-function randomString(length) {
+async function randomString(length) {
   var result = '';
   var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
   const charactersLength = characters.length;

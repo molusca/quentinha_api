@@ -23,8 +23,8 @@ module.exports = {
           type: Sequelize.INTEGER,
           allowNull: false,
         },
-        size: {
-          type: Sequelize.ENUM('P', 'M', 'G'),
+        mealSize: {
+          type: Sequelize.ENUM('s', 'm', 'l'),
           allowNull: false,
         },
         workerId: {

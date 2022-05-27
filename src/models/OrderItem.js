@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
     menuItemId: DataTypes.NUMBER,
     notes: DataTypes.STRING,
     orderId: DataTypes.NUMBER,
-    size: DataTypes.ENUM('P', 'M', 'G'),
+    mealSize: DataTypes.ENUM('s', 'm', 'l'),
     workerId: DataTypes.NUMBER,
     createdAt: DataTypes.DATE,
     updatedAt: DataTypes.DATE,

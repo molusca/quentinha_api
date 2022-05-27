@@ -11,7 +11,7 @@ module.exports = {
           autoIncrement: true,
           allowNull: false,
         },
-        amountG: {
+        amountL: {
           type: Sequelize.INTEGER,
           allowNull: false,
         },
@@ -19,7 +19,7 @@ module.exports = {
           type: Sequelize.INTEGER,
           allowNull: false,
         },
-        amountP: {
+        amountS: {
           type: Sequelize.INTEGER,
           allowNull: false,
         },
