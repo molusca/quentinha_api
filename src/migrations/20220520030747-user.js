@@ -33,7 +33,7 @@ module.exports = {
           type: Sequelize.STRING
         },
         mealSizePreference: {
-          type: Sequelize.ENUM('p', 'm', 'g'),
+          type: Sequelize.ENUM('s', 'm', 'l'),
         },
         token: {
           type: Sequelize.STRING,
